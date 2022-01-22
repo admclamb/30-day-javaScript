@@ -34,6 +34,7 @@ body {
 .key-hit {
   transform: scale(1.1);
   border-color: var(--color-main);
+  transition: 50ms;
 }
 
 .key:not(:last-child) {
