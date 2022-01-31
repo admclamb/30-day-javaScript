@@ -18,22 +18,24 @@ function displaySeconds(seconds) {
   const maxSeconds = 60;
   const percent = Number(seconds / maxSeconds);
   const degree = percent * 360;
-  console.log("degree", degree);
+  console.log("Secdegree", degree);
   secondHand.style.transform = `rotate(${degree}deg)`;
 }
 
 function displayMinutes(minutes) {
   const maxMinutes = 60;
-  const percent = Number(seconds / maxMinutes);
+  const percent = Number(minutes / maxMinutes);
   const degree = percent * 360;
-  secondHand.style.transform = `rotate(${degree}deg)`;
+  console.log("Mindegree", degree);
+  minuteHand.style.transform = `rotate(${degree}deg)`;
 }
 
 function displayHours(hours) {
   const maxHours = 24;
-  const percent = Number(seconds / maxHours);
+  const percent = Number(hours / maxHours);
   const degree = percent * 360;
-  secondHand.style.transform = `rotate(${degree}deg)`;
+  console.log("Hourdegree", degree);
+  hourHand.style.transform = `rotate(${360}}deg)`;
 }
 
 function main() {
@@ -45,8 +47,6 @@ function main() {
   displayMinutes(minutes);
   displayHours(hours);
   console.log(seconds, minutes, hours);
-
-  console.log(time);
 }
 
 setInterval(main, 1000);
