@@ -17,25 +17,25 @@ function getDate() {
 function displaySeconds(seconds) {
   const maxSeconds = 60;
   const percent = Number(seconds / maxSeconds);
-  const degree = percent * 360;
-  console.log("Secdegree", degree);
+  const degree = percent * 360 + 90;
   secondHand.style.transform = `rotate(${degree}deg)`;
 }
 
 function displayMinutes(minutes) {
   const maxMinutes = 60;
   const percent = Number(minutes / maxMinutes);
-  const degree = percent * 360;
-  console.log("Mindegree", degree);
+  const degree = percent * 360 + 90;
   minuteHand.style.transform = `rotate(${degree}deg)`;
 }
 
 function displayHours(hours) {
-  const maxHours = 24;
+  const maxHours = 12;
+  if (hours > 12) {
+    hours -= 12;
+  }
   const percent = Number(hours / maxHours);
-  const degree = percent * 360;
-  console.log("Hourdegree", degree);
-  hourHand.style.transform = `rotate(${360}}deg)`;
+  const degree = percent * 360 + 90;
+  hourHand.style.transform = `rotate(${degree}}deg)`;
 }
 
 function main() {
@@ -46,7 +46,6 @@ function main() {
   displaySeconds(seconds);
   displayMinutes(minutes);
   displayHours(hours);
-  console.log(seconds, minutes, hours);
 }
 
 setInterval(main, 1000);
