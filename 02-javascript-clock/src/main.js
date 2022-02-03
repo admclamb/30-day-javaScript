@@ -35,7 +35,7 @@ function displayHours(hours) {
   }
   const percent = Number(hours / maxHours);
   const degree = percent * 360 + 90;
-  hourHand.style.transform = `rotate(${degree}}deg)`;
+  hourHand.style.transform = `rotate(${degree}deg)`;
 }
 
 function main() {
