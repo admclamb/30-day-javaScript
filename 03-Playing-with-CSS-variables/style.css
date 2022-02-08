@@ -1,0 +1,32 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.sliders {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.4rem;
+}
+
+.sliders .input-control:first-child {
+  margin-right: 4rem;
+}
+
+.input-control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-control label {
+  margin-bottom: 0.5rem;
+}
+
+.image-border {
+  padding: 10rem;
+  background-color: rgb(226, 175, 36);
+}
